@@ -1,6 +1,6 @@
 ---
 title: "5 Interesting R Examples"
-author: "Cem Gürkan - BDA 503 - Fall 2017"
+author: "Cem GÃ¼rkan - BDA 503 - Fall 2017"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
      This article shows that How private business change the way of using taxi. Uber take over NYC Taxi  and with the trips and travel data analyzing the what's the best hour to move from one point to anohter.
   
   1. [BONUS:Analyzing the NYC Bike Share System](http://toddwschneider.com/posts/a-tale-of-twenty-two-million-citi-bikes-analyzing-the-nyc-bike-share-system/)  
-  This article shows that how bikes are change way of transportation comparing with Taxi or Uber
+  This article shows that how bikes are change way of transportation comparing with Taxi or Uber  
   
   
 
