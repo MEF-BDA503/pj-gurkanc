@@ -2,7 +2,7 @@
 
 ## Week 3 (Oct 24)
 
-We’ve built our project group. Group name is r_Junkies and group members are [Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/), [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/) and [Semih Tekten](https://mef-bda503.github.io/pj-tektens/). 
+We’ve built our project group. Group name is r_Junkies and group members are [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/), [Semih Tekten](https://mef-bda503.github.io/pj-tektens/) and me ([Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/))
 
 ## Week 2 (Oct 10)
 
