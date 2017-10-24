@@ -4,7 +4,7 @@
 
 + We’ve built our project group. Group name is r_Junkies and group members are [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/), [Semih Tekten](https://mef-bda503.github.io/pj-tektens/) and me ([Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/))
 
-+ The data I analyze is ... 
++ The data I analyze is London Fire Brigade Calls. You can find details of data and some visualization [here](files/hw2.html)
 
 ## Week 2 (Oct 10)
 
