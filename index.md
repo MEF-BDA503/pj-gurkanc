@@ -2,10 +2,13 @@
 
 ## Week 3 (Oct 24)
 
-+ We’ve built our project group. Group name is r_Junkies and group members are [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/), [Semih Tekten](https://mef-bda503.github.io/pj-tektens/) and me ([Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/))
++ We’ve built our project group. Group name is [r_Junkies](https://mef-bda503.github.io/gpj-rjunkies) and group members are [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/), [Semih Tekten](https://mef-bda503.github.io/pj-tektens/) and me ([Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/))
 
 + The data I analyze is London Fire Brigade Calls. You can find details of data and some visualization [here](files/hw2.html)
+
++ Lot's of news stuff, mostly visualization.
 
 ## Week 2 (Oct 10)
 
 + [Here](files/interesting_articles.html) is my 5 interesting R examples. 
++ RMarkdown 101
