@@ -1,0 +1,117 @@
+---
+title: "London Fire Brigade Calls EDA - Analysis"
+author: "Cem Gürkan - BDA 503 - Fall 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(out.format = "latex")
+knitr::knit_theme$set("acid")
+```
+
+## Introduction
+
+This is my first data analysis on R. Data is related with Calls made to London Fire Brigade between Jan 01 2017 to April 30 2017. Dataset is taken from [Kaggle|London Fire Data](https://www.kaggle.com/jboysen/london-fire/data).
+
+I'll do preliminary analysis on data and answer some questions and some visualizations.
+
+Hope you enjoy :)
+
+## Loading Data and Preliminary Analysis
+
+Load libraries used for this study.
+
+```{r warning=FALSE, message=FALSE}
+# Load packages
+library('ggplot2') # visualization
+library('ggthemes') # visualization
+library('dplyr') # data manipulation
+library('scales') # visualization
+```
+
+Let's import data set without header line.
+
+```{r include=TRUE, tidy=TRUE}
+
+#Read the data and omit the first row
+calls = read.csv("~/london_fire_brigade_service_calls.csv", header = TRUE)
+
+#See the dimension of our data
+dim(calls)
+```
+
+Our data consisting of 32 columns and 32247 rows. Let's what are these columns and their contents
+
+
+```{r include=TRUE, tidy=TRUE}
+#Structure and sample contents
+glimpse(calls)
+
+
+# Summary of data
+summary(calls) 
+```
+
+## Data Exploration and Visualization
+
+By creating trend analysis we can see number of calls on each day.   
+
+1. As you can see there is a outlier in Feb 23 and 523 calls made. 
+1. Average 268 calls made
+
+```{r}
+# Find the numbers of call on each day.
+grp_call <- calls %>%
+  group_by(date_of_call) %>%
+  summarise(count=n()) 
+
+#Show on the graph, see the trends
+ggplot(data=grp_call, aes(x=date_of_call, y=count, group = 1)) +
+  geom_line(colour = "red") +
+  labs(title="Trend of Calls between Jan-April 2017", x="Date of Call", y="Count") +
+  theme (axis.text.x=element_text (angle=-90,vjust=0.5,hjust=0))
+
+#Average calls
+grp_call %>% summarise(count=mean(count)) 
+```
+
+If we examine calls on day,
+
+* The number of calls increases from 0500 and reaches its peak at 1800
+* Early mornings have lower calls
+
+```{r}
+
+ggplot(data=calls,aes(x=calls$hour_of_call, group=1)) +
+geom_bar() +
+labs(title="Call trend by the hour of day",x="Hour of Call",y="Count")
+
+``` 
+
+If we examine the response time;  
+* Regardless of the hour of call, the average first response time is around 5 mins for all hours of the day
+
+```{r}
+data <- calls %>% mutate(first_pup_arriving_min=first_pump_arriving_attendance_time/60)
+
+ggplot(data=data,aes(y=data$first_pup_arriving_min, x=data$hour_of_call)) +
+  geom_boxplot(aes(group = cut_width(hour_of_call, 0.5)), outlier.alpha = 0.1, outlier.colour = "red", colour = "#3366FF")+
+labs(title="Average First Response Time",x="Hour of Call",y="Minute")
+``` 
+
+What about if we examine the highest calls day  
+
+* Average first response time is higher than all others day  
+
+```{r}
+#Highest call of the day
+data <- calls %>% filter(date_of_call=="2017-02-23")
+data <- data %>% mutate(first_pup_arriving_min=first_pump_arriving_attendance_time/60)
+
+
+ggplot(data=data,aes(y=data$first_pup_arriving_min, x=data$hour_of_call)) +
+  geom_boxplot(aes(group = cut_width(hour_of_call, 0.5)), outlier.alpha = 0.1, outlier.colour = "red", colour = "#3366FF")+
+labs(title="Average First Response Time",x="Hour of Call",y="Minute")
+``` 
+

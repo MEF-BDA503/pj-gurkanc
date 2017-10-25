@@ -4,7 +4,7 @@
 
 + We’ve built our project group. Group name is [r_Junkies](https://mef-bda503.github.io/gpj-rjunkies) and group members are [Rezan Azizoğlu](https://mef-bda503.github.io/pj-rezan/), [Yağmur Ulutürk Tekten](https://mef-bda503.github.io/pj-uluturktekteny/), [Semih Tekten](https://mef-bda503.github.io/pj-tektens/) and me ([Cem Kaya Gürkan](https://mef-bda503.github.io/pj-gurkanc/))
 
-+ The data I analyze is London Fire Brigade Calls. You can find details of data and some visualization [here](files/hw2.html)
++ The data I analyze is London Fire Brigade Calls. You can find details of data and some visualization [here](files/homework02.html)
 
 + Learn lot's of news stuff, mostly visualization.
 
