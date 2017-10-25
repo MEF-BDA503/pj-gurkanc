@@ -1,4 +1,3 @@
-# pj-gurkanc
-pj-lostxp created by GitHub Classroom
+# READ ME
 
 This repository is related with my journey in Data Analysis in R Language

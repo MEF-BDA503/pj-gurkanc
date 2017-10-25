@@ -1,0 +1,28 @@
+---
+title: "5 Interesting R Examples"
+author: "Cem Gürkan - BDA 503 - Fall 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+  1. [24 Data Science, R, Python, Excel, and Machine Learning Cheat Sheets](http://www.datasciencecentral.com/profiles/blogs/20-data-science-r-python-excel-and-machine-learning-cheat-sheets)  
+     When you learn a new language cheat sheet is your best friend. Here is the list of cheat related with data science.
+  
+  1. [HR Analytics](https://www.analyticsinhr.com/blog/tutorial-people-analytics-r-employee-churn/)  
+     This article show that how data can be used for prevent churn in enterprise company
+  
+  1. [AirBnd Engineering](https://medium.com/airbnb-engineering)  
+     How AirBnB solve real world problems with analyzing data. 
+  
+  1. [Analyzing tweets](https://medium.com/@stevenbeeckman/how-to-start-analyzing-tweets-cf027dce1c9b)  
+     This article is showing how to analyze tweets (hash tags). Basic understandingof how to make relation. 
+  
+  1. [Analyzing 1.1 Billion NYC Taxi and Uber Trips, with a Vengeance](http://toddwschneider.com/posts/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/)  
+     This article shows that How private business change the way of using taxi. Uber take over NYC Taxi  and with the trips and travel data analyzing the what's the best hour to move from one point to anohter.
+  
+  1. [BONUS:Analyzing the NYC Bike Share System](http://toddwschneider.com/posts/a-tale-of-twenty-two-million-citi-bikes-analyzing-the-nyc-bike-share-system/)  
+     This article shows that how bikes are change way of transportation comparing with Taxi or Uber  
+  

@@ -1,4 +1,4 @@
-# Example Progress Journal
+# Progress Journal
 
 ## Week 3 (Oct 24)
 
@@ -6,7 +6,7 @@
 
 + The data I analyze is London Fire Brigade Calls. You can find details of data and some visualization [here](files/hw2.html)
 
-+ Lot's of news stuff, mostly visualization.
++ Learn lot's of news stuff, mostly visualization.
 
 ## Week 2 (Oct 10)
 
