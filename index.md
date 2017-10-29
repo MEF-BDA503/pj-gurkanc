@@ -2,7 +2,7 @@
 
 ## Week 3 (Oct 29)
 
-+ Our dataset is Airplane Crash from 1908 to 2017. [Here](https://github.com/MEF-BDA503/gpj-rjunkies) you can find our project proposal.  
++ Our dataset is Airplane Crash from 1908 to 2017. [Here](https://mef-bda503.github.io/gpj-rjunkies/) you can find our project proposal.  
 
 ## Week 3 (Oct 24)
 
