@@ -1,13 +1,14 @@
 ---
 title: "London Fire Brigade Calls EDA - Analysis"
 author: "Cem Gürkan - BDA 503 - Fall 2017"
-output: html_document
+output: 
+  html_document: 
+    highlight: zenburn
+    theme: lumen
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(out.format = "latex")
-knitr::knit_theme$set("acid")
 ```
 
 ## Introduction
@@ -43,11 +44,9 @@ dim(calls)
 
 Our data consisting of 32 columns and 32247 rows. Let's what are these columns and their contents
 
-
 ```{r include=TRUE, tidy=TRUE}
 #Structure and sample contents
 glimpse(calls)
-
 
 # Summary of data
 summary(calls) 
@@ -115,3 +114,22 @@ ggplot(data=data,aes(y=data$first_pup_arriving_min, x=data$hour_of_call)) +
 labs(title="Average First Response Time",x="Hour of Call",y="Minute")
 ``` 
 
+If we want to look into which property type has most calls, Residential house is first one as expected. 
+
+
+```{r}
+#Find the #of calls for each property category
+data <- calls %>%
+  group_by(property_category) %>%
+  summarise(count=n())  %>%
+  arrange(desc(count))
+
+data
+
+ggplot(data=data,aes(x=reorder(property_category,-count), y=data$count)) +
+  geom_bar(stat="identity") +
+  labs(title="Calls for Property Category",x="Property Category",y="Count") +
+  theme (axis.text.x=element_text (angle=90,vjust=0.5, hjust=0))
+
+
+``` 
