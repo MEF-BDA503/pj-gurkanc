@@ -1,5 +1,12 @@
 # Progress Journal
 
+## Week 5 (Nov 20)
+
+Studied Tidyverse Recap - dplyr file. Studied all the task. You can find solutions of exercices section [here](files/tidy_recap.html). 
+
+## Week 4 (Nov 20)
+
+
 ## Week 3 (Oct 29)
 
 + Our dataset is Airplane Crash from 1908 to 2017. [Here](https://mef-bda503.github.io/gpj-rjunkies/files/AviationCrashProposal.html) you can find our project proposal.  

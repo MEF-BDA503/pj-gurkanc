@@ -1,0 +1,75 @@
+---
+title: 'Tidyverse Recap: Travel and Weather - Part I dplyr'
+author: "BDA 503 - Fall 2017"
+date: "20 Kasım 2017"
+output:
+  html_document:
+    highlight: pygments
+    theme: lumen
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This exercise is designed a recap to introduction to tidyverse from the very basics. 
+
+Solution of the exercices in [this documents](https://mef-bda503.github.io/files/tidyverse_recap_p1.html) shown below.
+
+
+## Preparation
+
+First we are going to download data then load the weather data.
+
+```{r cars}
+# Load the package to the session
+library(tidyverse)
+# Download file from gitHub
+download.file("https://mef-bda503.github.io/files/travel_weather.RData", "travel_weather.RData")
+# Load the data set file
+load("travel_weather.RData")
+```
+
+Now let’s take a look at our data.
+
+## Travel Weather Data
+
+```{r}
+travel_weather %>%
+    tbl_df()
+```
+
+## Final Exercises
+
+1. Return the dates which Amsterdam is strictly warmer than London but strictly colder than Venice
+
+```{r}
+travel_weather %>% filter( Amsterdam>London & Amsterdam < Venice)
+```
+
+
+2. For each month of each year calculate the average difference between NYC and Amsterdam for the days NYC is strictly warmer than Amsterdam, rounded by 1 decimal. Arrange from the highest difference to the lowest.
+
+```{r}
+travel_weather %>% 
+  filter(NYC>Amsterdam) %>%
+  group_by (year, month) %>%
+  summarise(NYCwA_diff = round(mean(NYC-Amsterdam),digits=1) ) %>%
+  arrange(desc(NYCwA_diff))
+```
+
+
+3. Return the warmest city and its temperature of each day.
+
+```{r}
+travel_weather %>%
+  gather(key=City,value=Temperature, -year, -month, -day) %>%
+  group_by(year, month, day) %>%
+  mutate(max_temp =max(Temperature)) %>%
+  filter(Temperature==max_temp)  %>%
+  arrange(year,month,day) %>%
+  select(year, month, day,City,Temperature)
+```
