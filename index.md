@@ -1,5 +1,9 @@
 # Progress Journal
 
+## 23 November
+
+Start watching Datacamp lessons. Start with "Supervised Learning" - "k-Nearest Neighbors (kNN)".
+
 ## Week 5 (Nov 20)
 
 Studied Tidyverse Recap - dplyr file. Studied all the task. You can find solutions of exercices section [here](files/tidy_recap.html). 
