@@ -1,5 +1,9 @@
 # Progress Journal
 
+## Dec 01
+
+Machine learning assignment. [My analysis](files/diamonds.html) on Diamonds data.
+
 ## 23 November
 
 Start watching Datacamp lessons. Start with "Supervised Learning" - "k-Nearest Neighbors (kNN)".
